@@ -1,0 +1,23 @@
+package org.example; // Keep your package declaration if you are using one
+
+public class HelloApp {
+    public static void main(String[] args) {
+        if (args.length > 0) {
+            StringBuilder names = new StringBuilder();
+            boolean isFirst = true; // Used to handle the comma placement
+            
+            // The Enhanced For-Loop
+            for (String arg : args) {
+                if (!isFirst) {
+                    names.append(", ");
+                }
+                names.append(arg);
+                isFirst = false;
+            }
+            
+            System.out.println("Hello, " + names + "!");
+        } else {
+            System.out.println("Hello, World!");
+        }
+    }
+}

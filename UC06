@@ -1,0 +1,23 @@
+package org.example; // Keep your package declaration if you are using one
+
+public class HelloApp {
+    public static void main(String[] args) {
+        if (args.length > 0) {
+            StringBuilder names = new StringBuilder();
+            
+            // Enhanced For-Loop: Adds every name followed by a comma and space
+            for (String arg : args) {
+                names.append(arg).append(", ");
+            }
+            
+            // The Substring Concept:
+            // Extract the string from the beginning (index 0) up to 
+            // the length minus 2 (which drops the final ", ")
+            String finalNames = names.substring(0, names.length() - 2);
+            
+            System.out.println("Hello, " + finalNames + "!");
+        } else {
+            System.out.println("Hello, World!");
+        }
+    }
+}
